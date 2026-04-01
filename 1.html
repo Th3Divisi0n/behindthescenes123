@@ -153,8 +153,15 @@
                                   ░░   ███████████████████████████▒ ░  ░░░░░░░ ░      ░  
   </pre>
 <script>
-  const CODE = ['VE9S', 'VE1FTlQ='].map(atob).join('');
-  const NEXT = atob('bG10aC5sa3Nsa2xnS0oyNjU0MzUxXzI=').split('').reverse().join('');
+  const CODE = [
+    'VE9S',
+    'TUVOVA=='
+  ].map(atob).join('');
+
+  const NEXT = atob('Ml8xNTM0NTYySktna2xza2wuaHRtbA==')
+    .split('')
+    .reverse()
+    .join('');
 
   function check() {
     const v = document.getElementById('inp').value.trim().toUpperCase();
