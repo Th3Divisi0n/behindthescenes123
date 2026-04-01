@@ -81,8 +81,16 @@
   <div class="msg" id="msg"></div>
 </div>
 <script>
-  const CODE = atob('WU9VUl9LRVlfSEVSRQ==');
-  const NEXT = atob('M19KS2xqa2xmajM5OTE0YTkuaHRtbA==');
+  const CODE = [
+    'WU9VUg==',
+    'X0tFWQ==',
+    'X0hFUkU='
+  ].map(atob).join('');
+
+  const NEXT = atob('bG10aC45YTQxOTkzamZsa2psS0pfMw==')
+    .split('')
+    .reverse()
+    .join('');
 
   function check() {
     const v = document.getElementById('inp').value.trim().toUpperCase();
