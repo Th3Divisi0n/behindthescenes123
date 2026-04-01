@@ -92,21 +92,7 @@
   </div>
   <div class="msg" id="msg"></div>
 </div>
-<script>
-  const CODE = 'TORMENT';
-  const NEXT = '2_1534562JKgklskl.html';
-  function check() {
-    const v = document.getElementById('inp').value.trim().toUpperCase();
-    const m = document.getElementById('msg');
-    if (v === CODE) {
-      m.textContent = 'correct.'; m.className = 'msg ok';
-      setTimeout(() => location.href = NEXT, 1000);
-    } else {
-      m.textContent = 'wrong.'; m.className = 'msg';
-      document.getElementById('inp').value = '';
-    }
-  }                                                                 
-<!--                                                                                                   
+  <pre style="visibility: hidden;">                                                                                                  
                                            ░░▒▒   ▒████░                                            
                                    ░▓▓███████████████████▓▓░▒░                                      
            ▓█░   ░█▒ ██████▒ ░█▓▓████████████████████████████████████ ░▓████▓▒ ▓░     ▓ ░▓          
@@ -164,7 +150,22 @@
            ▓▓  ▓▓░█▒   ░█░        ▓█▓██████████████████████████████▒█ ▒██▓▓▓   █▒░▓░░░█░            
            ▓▓   ▒██▒   ░█░        ▓█▒█████████████████████████████▒░█ ▒█       █▒░  ▓██░            
            ▓▓    ░█▒   ░█░        ▓█ ▓████████████████████████████▒░█ ▒█▒░░░░░ █▒   ▒██░            
-                                  ░░   ███████████████████████████▒ ░  ░░░░░░░ ░      ░   -->
+                                  ░░   ███████████████████████████▒ ░  ░░░░░░░ ░      ░  
+  </pre>
+<script>
+  const CODE = 'TORMENT';
+  const NEXT = '2_1534562JKgklskl.html';
+  function check() {
+    const v = document.getElementById('inp').value.trim().toUpperCase();
+    const m = document.getElementById('msg');
+    if (v === CODE) {
+      m.textContent = 'correct.'; m.className = 'msg ok';
+      setTimeout(() => location.href = NEXT, 1000);
+    } else {
+      m.textContent = 'wrong.'; m.className = 'msg';
+      document.getElementById('inp').value = '';
+    }
+  }                                                                 
 </script>
 </body>
 </html>
