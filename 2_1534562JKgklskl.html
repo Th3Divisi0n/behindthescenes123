@@ -81,20 +81,27 @@
   <div class="msg" id="msg"></div>
 </div>
 <script>
-  const CODE = 'YOUR_KEY_HERE';
-  const NEXT = '3_JKljklfj39914a9.html';
+  const CODE = atob('WU9VUl9LRVlfSEVSRQ==');
+  const NEXT = atob('M19KS2xqa2xmajM5OTE0YTkuaHRtbA==');
+
   function check() {
     const v = document.getElementById('inp').value.trim().toUpperCase();
     const m = document.getElementById('msg');
+
     if (v === CODE.toUpperCase()) {
-      m.textContent = 'correct.'; m.className = 'msg ok';
+      m.textContent = 'correct.';
+      m.className = 'msg ok';
       setTimeout(() => location.href = NEXT, 1000);
     } else {
-      m.textContent = 'wrong.'; m.className = 'msg';
+      m.textContent = 'wrong.';
+      m.className = 'msg';
       document.getElementById('inp').value = '';
     }
   }
-  document.getElementById('inp').addEventListener('keydown', e => { if(e.key==='Enter') check(); });
+
+  document.getElementById('inp').addEventListener('keydown', e => {
+    if (e.key === 'Enter') check();
+  });
 </script>
 </body>
 </html>
