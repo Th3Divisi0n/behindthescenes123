@@ -93,8 +93,8 @@
 <div class="scanlines"></div>
 <div class="vignette"></div>
 <div class="victory" id="victory">
-  <div class="v-title">// end of transmission //</div>
-  <div class="v-msg">you are outside.<br>the hum is gone.</div>
+  <div class="v-title">// end //</div>
+  <div class="v-msg">... - ..- -.-. -.- / -... . .-.. --- .-- / - .... . / ... ..- .-. ..-. .- -.-. .<br>.. / .-- .. .-.. .-.. / - --- .-. -- . -. - / -.-- --- ..- / -. . -..- -</div>
 </div>
 <div class="ui">
   <div class="input-row">
@@ -104,23 +104,34 @@
   <div class="msg" id="msg"></div>
 </div>
 <script>
-  const CODE = 'YOUR_KEY_HERE';
+  const CODE = [
+    'UkU=',
+    'U1RBUlQ='
+  ].map(atob).join('');
+
   const NEXT = null;
+
   function check() {
     const v = document.getElementById('inp').value.trim().toUpperCase();
     const m = document.getElementById('msg');
+
     if (v === CODE.toUpperCase()) {
-      m.textContent = 'correct.'; m.className = 'msg ok';
+      m.textContent = 'correct.';
+      m.className = 'msg ok';
       setTimeout(() => {
         if (NEXT) location.href = NEXT;
         else document.getElementById('victory').classList.add('show');
       }, 1000);
     } else {
-      m.textContent = 'wrong.'; m.className = 'msg';
+      m.textContent = 'wrong.';
+      m.className = 'msg';
       document.getElementById('inp').value = '';
     }
   }
-  document.getElementById('inp').addEventListener('keydown', e => { if(e.key==='Enter') check(); });
+
+  document.getElementById('inp').addEventListener('keydown', e => {
+    if (e.key === 'Enter') check();
+  });
 </script>
 </body>
 </html>
